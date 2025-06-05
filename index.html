@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💱 Currency Converter</h1>
+        
+        <form class="converter-form" id="converterForm">
+            <div class="input-group">
+                <label for="amount">Amount</label>
+                <div class="currency-row">
+                    <div class="amount-input">
+                        <input type="number" id="amount" placeholder="Enter amount" step="0.01" min="0" required>
+                    </div>
+                    <div class="currency-select">
+                        <select id="fromCurrency" required>
+                            <option value="">From</option>
+                            <option value="USD">USD - US Dollar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CHF">CHF - Swiss Franc</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                            <option value="KRW">KRW - South Korean Won</option>
+                            <option value="RWF">RWF - Rwandan Franc</option>
+                            <option value="BRL">BRL - Brazilian Real</option>
+                            <option value="MXN">MXN - Mexican Peso</option>
+                            <option value="SGD">SGD - Singapore Dollar</option>
+                            <option value="NZD">NZD - New Zealand Dollar</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="swap-btn" id="swapBtn" title="Swap currencies">⇄</button>
+
+            <div class="input-group">
+                <label for="toCurrency">Convert To</label>
+                <select id="toCurrency" required>
+                    <option value="">To</option>
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                    <option value="CAD">CAD - Canadian Dollar</option>
+                    <option value="AUD">AUD - Australian Dollar</option>
+                    <option value="CHF">CHF - Swiss Franc</option>
+                    <option value="CNY">CNY - Chinese Yuan</option>
+                    <option value="INR">INR - Indian Rupee</option>
+                    <option value="KRW">KRW - South Korean Won</option>
+                    <option value="RWF">RWF - Rwandan Franc</option>
+                    <option value="BRL">BRL - Brazilian Real</option>
+                    <option value="MXN">MXN - Mexican Peso</option>
+                    <option value="SGD">SGD - Singapore Dollar</option>
+                    <option value="NZD">NZD - New Zealand Dollar</option>
+                </select>
+            </div>
+
+            <button type="submit" class="convert-btn">Convert Currency</button>
+        </form>
+
+        <div class="loading" id="loading">Converting...</div>
+        <div class="error" id="error"></div>
+        
+        <div class="result" id="result"></div>
+        <div class="rate-info" id="rateInfo"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
